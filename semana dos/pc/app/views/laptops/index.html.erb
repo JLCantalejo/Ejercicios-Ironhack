@@ -1,0 +1,20 @@
+<h1 style='text-align:center;color:green;font-size:50px;font-family:Verdana;'>Futurmanía 3000</h1>
+<h1 style='background-color:yellow'>Listing laptops</h1> 
+<% @laptops.each do |laptop|%>
+ <div style='background-color:orange'>
+ 	<%= laptop.brand %><br> <%= link_to 'Show',  laptop_path(laptop)%>
+  	<%= link_to 'Edit', edit_laptop_path(laptop) %>
+  	<%= link_to 'Destroy', laptop_path(laptop), method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+<% end %>
+<p style='background-color:violet'>
+    <%= link_to 'New laptop', new_laptop_path %>
+</p>
+<p style='text-align:center'>
+	<a href='http://localhost:3000/backpacks'>
+	<img src='http://cdn.palbin.com/users/9780/images/billabong-deploy-rucksack-1401501388.png.thumb'/>
+	</a>
+	<br>
+	<a href='http://localhost:3000/backpacks'>Click picture</a>
+	
+</p>

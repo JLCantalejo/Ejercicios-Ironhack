@@ -1,0 +1,21 @@
+<h1 style='text-align:center;color:green;font-size:50px;font-family:Verdana;'>Futurmanía 3000</h1>
+<h1 style='background-color:yellow'>Listing backpacks</h1> 
+<% @backpacks.each do |backpack|%>
+ <div style='background-color:orange'>
+ 	<%= backpack.color %><br> <%= link_to 'Show',  backpack_path(backpack)%>
+  	<%= link_to 'Edit', edit_backpack_path(backpack) %>
+  	<%= link_to 'Destroy', backpack_path(backpack), method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+<% end %>
+<p style='background-color:violet'>
+    <%= link_to 'New backpack', new_backpack_path %>
+</p>
+<p style='text-align:center'>
+	<a href='http://localhost:3000/laptops'>
+	<img src='http://imagenes.web4pro.es/articulos/256/256/fixed/art_tos-p%20l10w-b-101_1.jpg'/>
+	</a>
+	<br>
+	<a href='http://localhost:3000/laptops'>Click picture</a>
+	
+</p>
+

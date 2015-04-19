@@ -1,1 +1,0 @@
- Article.create( title: "", text: "",)
