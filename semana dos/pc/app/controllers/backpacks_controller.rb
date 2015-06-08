@@ -1,16 +1,16 @@
 class BackpacksController < ApplicationController
-   def index
+    def index
       @backpacks = Backpack.all
-   end
-   def show
+    end
+    def show
       @backpack = Backpack.find(params[:id])
     end
     def new
    		@backpack = Backpack.new
   	end
-	def edit
+    def edit
   		@backpack = Backpack.find(params[:id])
-	end
+    end
   	def create
      	@backpack = Backpack.new(backpack_params)
      	@backpack.save
